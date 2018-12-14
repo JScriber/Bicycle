@@ -1,0 +1,27 @@
+img {
+  width: 100%;
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.speed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(39, 39, 39);
+  background-color: rgba(255, 255, 255, 0.3);
+}

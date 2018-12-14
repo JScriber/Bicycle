@@ -12,6 +12,10 @@ export class IdeaJourneyComponent implements OnInit {
     console.log('displayed');
   }
 
+  close() {
+    this.bottomSheetRef.dismiss();
+  }
+
   ngOnInit() {
   }
 

@@ -27,6 +27,7 @@ import { InfoJourneyComponent } from './info-journey/info-journey.component';
 import { ChoicesComponent } from './choices/choices.component';
 import { IdeaJourneyComponent } from './idea-journey/idea-journey.component';
 import { ShareComponent } from './share/share.component';
+import { JourneyComponent } from './journey/journey.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ShareComponent } from './share/share.component';
     ChoicesComponent,
     IdeaJourneyComponent,
     ShareComponent,
+    JourneyComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
