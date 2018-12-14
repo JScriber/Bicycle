@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatBottomSheet } from '@angular/material';
+import { ShareComponent } from '../share/share.component';
 
 enum Criteria {
   Beginner,
@@ -22,7 +24,13 @@ export class MainComponent {
 
   filter: Criteria;
 
-  constructor() {}
+  constructor(private bottomSheet: MatBottomSheet) {}
+
+
+  openBottomSheet(): void {
+    this.bottomSheet.open(ShareComponent);
+  }
+
 
   /** Different criterias. */
   criterias: { title: string; criteria: Criteria; }[] = [

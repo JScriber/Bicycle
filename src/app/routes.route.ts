@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { TypeJourneyComponent } from './type-journey/type-journey.component';
 import { InfoJourneyComponent } from './info-journey/info-journey.component';
 import { ChoicesComponent } from './choices/choices.component';
+import { ShareComponent } from './share/share.component';
 
 export const routes: Routes = [
   {
@@ -29,8 +30,8 @@ export const routes: Routes = [
     component: InfoJourneyComponent
   },
   {
-    path: 'propositions',
-    component: ChoicesComponent
+    path: 'partager',
+    component: ShareComponent
   },
   {
     path: 'app',

@@ -26,6 +26,7 @@ import { TypeJourneyComponent } from './type-journey/type-journey.component';
 import { InfoJourneyComponent } from './info-journey/info-journey.component';
 import { ChoicesComponent } from './choices/choices.component';
 import { IdeaJourneyComponent } from './idea-journey/idea-journey.component';
+import { ShareComponent } from './share/share.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { IdeaJourneyComponent } from './idea-journey/idea-journey.component';
     InfoJourneyComponent,
     ChoicesComponent,
     IdeaJourneyComponent,
+    ShareComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -59,7 +61,8 @@ import { IdeaJourneyComponent } from './idea-journey/idea-journey.component';
     MatSidenavModule
   ],
   entryComponents: [
-    IdeaJourneyComponent
+    IdeaJourneyComponent,
+    ShareComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
