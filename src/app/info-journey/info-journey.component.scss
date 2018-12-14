@@ -12,7 +12,31 @@
     width: 100%;
   }
 
+  label {
+    margin: 10px 0;
+  }
+
   mat-select {
     margin-bottom: 10px;
   }
+}
+
+.radio-box {
+  display: block;
+  margin: 10px !important;
+}
+
+label {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+mat-radio-button {
+  width: 100%;
+  margin: 5px 0;
+  margin-left: 10px;
+}
+
+button {
+  margin-top: 10px;
 }

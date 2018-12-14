@@ -5,6 +5,7 @@ import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
 import { TypeJourneyComponent } from './type-journey/type-journey.component';
 import { InfoJourneyComponent } from './info-journey/info-journey.component';
+import { ChoicesComponent } from './choices/choices.component';
 
 export const routes: Routes = [
   {
@@ -26,6 +27,10 @@ export const routes: Routes = [
   {
     path: 'info-parcours',
     component: InfoJourneyComponent
+  },
+  {
+    path: 'propositions',
+    component: ChoicesComponent
   },
   {
     path: 'app',

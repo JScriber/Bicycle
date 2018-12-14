@@ -1,26 +1,36 @@
 <div class="content">
   <h2>Configuration</h2>
 
-  <form>
+  <form [formGroup]="form" (ngSubmit)="submit()">
     <mat-form-field class="full-width">
-      <input matInput placeholder="Lieu de départ">
+      <input matInput placeholder="Lieu de départ" formControlName="start">
     </mat-form-field>
 
     <mat-form-field class="full-width">
-      <input matInput placeholder="Lieu d'arrivée">
+      <input matInput placeholder="Lieu d'arrivée" formControlName="end">
     </mat-form-field>
 
-    <mat-select placeholder="Allure souhaitée">
-      <mat-option value="">Balade</mat-option>
-      <mat-option value="">Sportif</mat-option>
-      <mat-option value="">Touriste</mat-option>
-    </mat-select>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Temps moyen souhaité" formControlName="time">
+    </mat-form-field>
 
-    <mat-select placeholder="Type de vélo">
-      <mat-option value="">VTT</mat-option>
-      <mat-option value="">De course</mat-option>
-      <mat-option value="">De ville</mat-option>
-    </mat-select>
+    <label>Allure souhaitée</label>
+    <div class="radio-box">
+      <mat-radio-group formControlName="allure">
+        <mat-radio-button value="balade">Balade</mat-radio-button>
+        <mat-radio-button value="sportive">Sportive</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    
+    <label>Type de vélo</label>
+    <div class="radio-box">
+      <mat-radio-group formControlName="bike">
+        <mat-radio-button value="vtt">VTT</mat-radio-button>
+        <mat-radio-button value="ville">Vélo de ville</mat-radio-button>
+        <mat-radio-button value="course">Vélo de course</mat-radio-button>
+      </mat-radio-group>
+    </div>
 
     <button mat-raised-button color="primary" class="full-width" type="submit">
       Valider
