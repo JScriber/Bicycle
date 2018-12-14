@@ -32,8 +32,14 @@
       </mat-radio-group>
     </div>
 
-    <button mat-raised-button color="primary" class="full-width" type="submit">
+    <button *ngIf="form.valid; else disabled" mat-raised-button color="primary" class="full-width" type="submit">
       Valider
     </button>
+  
+    <ng-template #disabled>
+      <button mat-raised-button color="primary" disabled class="full-width" type="submit">
+        Valider
+      </button>
+    </ng-template>
   </form>
 </div>

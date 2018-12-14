@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatIconModule } from '@angular/material';
+import { MatIconModule, MatSidenavModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
@@ -24,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { TypeJourneyComponent } from './type-journey/type-journey.component';
 import { InfoJourneyComponent } from './info-journey/info-journey.component';
 import { ChoicesComponent } from './choices/choices.component';
+import { IdeaJourneyComponent } from './idea-journey/idea-journey.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { ChoicesComponent } from './choices/choices.component';
     TypeJourneyComponent,
     InfoJourneyComponent,
     ChoicesComponent,
+    IdeaJourneyComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -51,7 +54,12 @@ import { ChoicesComponent } from './choices/choices.component';
     MatCardModule,
     MatListModule,
     MatMenuModule,
-    MatRadioModule
+    MatRadioModule,
+    MatBottomSheetModule,
+    MatSidenavModule
+  ],
+  entryComponents: [
+    IdeaJourneyComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

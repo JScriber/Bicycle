@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatBottomSheet } from '@angular/material';
+import { IdeaJourneyComponent } from '../idea-journey/idea-journey.component';
 
 @Component({
   selector: 'app-info-journey',
@@ -17,14 +19,20 @@ export class InfoJourneyComponent implements OnInit {
     bike: new FormControl('vtt', Validators.required)
   });
 
-  constructor(private readonly router: Router) {}
+  constructor(private readonly router: Router,
+              private bottomSheet: MatBottomSheet) {}
+
+
+  openBottomSheet(): void {
+    this.bottomSheet.open(IdeaJourneyComponent);
+  }
 
   ngOnInit() {}
 
   /** Submit the form. */
   submit(): void {
     if (this.form.valid) {
-      this.router.navigate(['propositions']);
+      this.openBottomSheet();
     }
   }
 
