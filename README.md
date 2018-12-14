@@ -19,4 +19,7 @@ npm install
 npm run start
 ```
 
-After some loading, you can now enter the project by visiting your [localhost](localhost:4200/accueil).
+After some loading, you can now enter the project by visiting:
+```
+localhost:4200/accueil
+```
