@@ -1,0 +1,40 @@
+<h2 class="mat-primary">Inscription</h2>
+  
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <div class="connect-google">
+    <button mat-stroked-button color="primary" type="button" (click)="googleAuthentification()">
+      S'inscrire avec Google
+    </button>
+
+    <div class="or">ou</div>
+  </div>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Nom d'utilisateur" formControlName="username">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Adresse mail" formControlName="email">
+  </mat-form-field>
+
+  <mat-error *ngIf="form.get('email').hasError('email')">
+    <p class="error">Merci d'entrer une <strong>adresse mail valide</strong>.</p>
+  </mat-error>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Mot de passe" formControlName="password">
+  </mat-form-field>
+
+  <div class="submit">
+    <button *ngIf="form.valid; else disabled" mat-raised-button color="primary" type="submit">
+      M'inscrire
+    </button>
+
+    <ng-template #disabled>
+      <button mat-raised-button color="primary" disabled type="submit">
+        M'inscrire
+      </button>
+    </ng-template>
+  </div>
+</form>

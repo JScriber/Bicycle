@@ -1,0 +1,36 @@
+.home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+
+    color: #fff;
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: 18px;
+    }
+  }
+}
+
+.signin {
+  height: 50%;
+  background-color: #673ab7;
+
+  button {
+    color: #fff;
+  }
+}
+
+.signup button {
+  color: #673ab7;
+}

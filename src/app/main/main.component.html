@@ -1,0 +1,85 @@
+<mat-tab-group headerPosition="below" backgroundColor="primary">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>home</mat-icon>
+    </ng-template>
+    
+    <div class="home">
+      <div class="overlay">
+        <img src="../../assets/images/locate.svg"/>
+        <p class="mat-primary">Vous êtes <strong>prêt</strong> à <strong>partir</strong> !</p>
+      </div>
+    </div>
+
+    <button mat-fab class="fab" [routerLink]="['/type-parcours']">
+      <mat-icon aria-label="icon-button with a heart icon">
+        directions
+      </mat-icon>
+    </button>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>history</mat-icon>
+    </ng-template>
+
+    <div class="history content">
+      <h2>Historique</h2>
+  
+      <mat-select placeholder="Critère" [(value)]="filter">
+        <mat-option>Aucun</mat-option>
+        <mat-option *ngFor="let criteria of criterias" [value]="criteria.criteria">
+          {{ criteria.title }}
+        </mat-option>
+      </mat-select>
+
+      <mat-list>
+        <ng-container *ngFor="let hist of history">
+          <mat-list-item *ngIf="filter === undefined || hist.criteria === filter">
+            <h4 mat-line><strong>{{ hist.date }}</strong></h4>
+            <p mat-line>De <i>{{ hist.from }}</i></p>
+            <p mat-line>À <i>{{ hist.to }}</i></p>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>redo</mat-icon>
+                <span>Refaire</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>share</mat-icon>
+                <span>Partager</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>delete_forever</mat-icon>
+                <span>Supprimer</span>
+              </button>
+            </mat-menu>
+          </mat-list-item>
+        </ng-container>
+      </mat-list>
+
+      <button mat-fab class="fab">
+        <mat-icon aria-label="icon-button with a heart icon">
+          clear_all
+        </mat-icon>
+      </button>
+    </div>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>account_circle</mat-icon>
+    </ng-template>
+    <div class="account content">
+      <h2>John Doe</h2>
+
+      <button mat-fab class="fab">
+        <mat-icon aria-label="icon-button with a heart icon">
+          log_out
+        </mat-icon>
+      </button>
+    </div>
+  </mat-tab>
+</mat-tab-group>
